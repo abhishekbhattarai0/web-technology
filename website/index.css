@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-size: 16px;
+
+
+}
+
+
+.logo-container img {
+    height: 55px;
+}
+
+header {
+    height: 64px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.right-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+.apply-btn {
+
+    padding: 6px 8px;
+    background-color: #000000;
+    color: white;
+    border-radius: 8px;
+    box-shadow: none;
+    font-weight: 600;
+}
+
+
+/* HERO STARTS HERE*/
+.hero-container {
+    position: relative;
+
+}
+
+.hero-img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+.hero-overlay {
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.459);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding-left: 20px;
+
+}
+
+.hero-title {
+    font-size: 4rem;
+}
+
+.hero-para {
+    width: 700px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.hero-btn {
+    width: 168px;
+    margin-top: 20px;
+    padding: 8px 10px;
+    background-color: #000000;
+    color: white;
+}
+
+
+/* ABOUT SECTION STYLES*/
+
+.about-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-top: 40px
+}
+
+.about-h1 {
+    font-size: 36px;
+    color: rgb(33, 33, 33);
+}
+
+.about-p {
+    font-size: 18px;
+    color: gray;
+    margin-top: 20px;
+}
+
+.about-stats {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.stats-h1 {
+    font-size: 30px;
+    color: rgb(33, 33, 33);
+    margin-top: 20px
+}
+
+.stats-p {
+    font-size: 16px;
+    color: gray;
+}
+
+
+
+.about-image-container img {
+    /* height: 280px; */
+    width: 656px;
+}
+
+/* Courses*/
+
+.courses-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    gap: 40px;
+}
+
+
+
+.feathured-course {
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.course-img-container img {
+    width: 400px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 15px;
+
+}
+
+.course-title {
+    margin-top: 10px;
+}
+
+.course-description {
+    width: 430px;
+    margin-top: 10px;
+}
+
+.course-btn {
+    width: 168px;
+    margin-top: 20px;
+    padding: 8px 10px;
+    color: gray;
+    outline: 0.5px solid rgb(55, 50, 50);
+    border-radius: 4px;
+}
+
+.courses {
+    display: flex;
+    /* gap: 4px; */
+    margin-left: 20px;
+}
+
+/* testimonial */
+
+.testimonial-container {
+    background-color: #fff;
+    padding: 30px;
+    width: 80%;
+    margin-top: 20px;
+
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+/* Heading styles */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Individual testimonial styles */
+.testimonial {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 5px solid #007bff;
+    background-color: #fafafa;
+    border-radius: 8px;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+}
+
+.student-name {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+    color: #007bff;
+}
+
+.location-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #f9fafb;
+}
+
+/* Container for content */
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Title styling */
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 3rem;
+}
+
+/* Grid styling */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Map container */
+.map-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 0.75rem;
+}
+
+.map-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Info container */
+.info-container {
+    padding: 2rem;
+}
+
+/* Info title */
+.info-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+/* Contact info styling */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+.contact-info .icon {
+    font-size: 1.25rem;
+    color: #2563eb;
+    margin-right: 1rem;
+}
+
+.contact-info span {
+    font-size: 1rem;
+}
+
+/* Schedule button */
+.schedule-button {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: background-color 0.3s;
+}
+
+.schedule-button:hover {
+    background-color: #1d4ed8;
+}
