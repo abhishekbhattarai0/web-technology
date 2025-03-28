@@ -141,7 +141,6 @@ header {
 
 
 .about-image-container img {
-    /* height: 280px; */
     width: 656px;
 }
 
@@ -192,7 +191,6 @@ header {
 
 .courses {
     display: flex;
-    /* gap: 4px; */
     margin-left: 20px;
 }
 
