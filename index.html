@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <form id="myForm">
+        <label>Name:</label>
+        <input type="text" id="name">
+        <span class="error" id="nameError"></span>
+
+        <label>Email:</label>
+        <input type="text" id="email">
+        <span class="error" id="emailError"></span>
+
+        <label>Age:</label>
+        <input type="number" id="age">
+        <span class="error" id="ageError"></span>
+
+        <label>Fee:</label>
+        <input type="number" id="fee">
+        <span class="error" id="feeError"></span>
+
+        <label>Address:</label>
+        <input type="text" id="address">
+        <span class="error" id="addressError"></span>
+
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            $('#myForm').on('submit', function (event) {
+                event.preventDefault();
+
+                let isValid = true;
+
+                // clear previous errors
+                $('.error').text('');
+
+                const name = $('#name').val();
+                const email = $('#email').val();
+                const age = $('#age').val();
+                const fee = $('#fee').val();
+                const address = $('#address').val();
+
+                if (name.trim() === '') {
+                    $('#nameError').text('Name field cannot be empty.');
+                    isValid = false;
+                }
+
+                const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!emailPattern.test(email)) {
+                    $('#emailError').text('Invalid email.');
+                    isValid = false;
+                }
+
+                if (isNaN(age) || age < 18 || age > 100) {
+                    $('#ageError').text('Age must be a number between 18 and 100.');
+                    isValid = false;
+                }
+
+                if (isNaN(fee) || fee < 100) {
+                    $('#feeError').text('Invalid fee amount.');
+                    isValid = false;
+                }
+
+                if (address.trim() === '') {
+                    $('#addressError').text('Address field cannot be empty.');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    alert('Form submitted successfully');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
